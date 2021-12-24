@@ -1,3 +1,3 @@
 module.exports = {
-  '*.{ts,tsx,js}': () => ['npm run format:fix', 'npm run validate'],
+  '*.{ts,tsx,js}': () => ['npm run format:fix', 'npm run validate-nobuild'],
 }
