@@ -40,6 +40,13 @@ const Spacing = () => (
         ['w-72', '18rem'],
         ['w-80', '20rem'],
         ['w-96', '24rem'],
+        ['w-112', '28rem'],
+        ['w-128', '32rem'],
+        ['w-144', '36rem'],
+        ['w-160', '40rem'],
+        ['w-176', '44rem'],
+        ['w-192', '48rem'],
+        ['w-208', '52rem'],
       ].map(([size, text]) => (
         <div key={size} className='flex items-center my-2 -ml-8 text-sm'>
           <div className='w-6 mr-2 text-right text-gray-500'>

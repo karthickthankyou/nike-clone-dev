@@ -62,4 +62,12 @@ module.exports = {
     'jsx-a11y/anchor-is-valid': 'off',
     'jsx-a11y/label-has-associated-control': 'warn',
   },
+  overrides: [
+    {
+      files: ['*stories.tsx'],
+      rules: {
+        'react/jsx-props-no-spreading': 'off',
+      },
+    },
+  ],
 }

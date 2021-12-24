@@ -18,6 +18,7 @@ const Image = (props: IImageProps) => {
       alt={alt}
       src={imgSrc}
       className={`object-cover ${className}`}
+      layout='fill'
       onError={() => {
         setImgSrc(fallbackSrc)
       }}
