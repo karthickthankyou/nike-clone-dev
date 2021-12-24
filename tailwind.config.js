@@ -18,6 +18,12 @@ module.exports = {
         '80p': '80%',
         '90p': '90%',
       },
+      fontFamily: {
+        display: ['Helvetica'],
+      },
+      outlineWidth: {
+        1.5: '1.5px',
+      },
     },
   },
   variants: {

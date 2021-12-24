@@ -10,6 +10,9 @@ import {
 
 import { RiDatabaseFill } from '@react-icons/all-files/ri/RiDatabaseFill'
 import MenuIcon from '@heroicons/react/outline/MenuIcon'
+import ShoppingBagIcon from '@heroicons/react/outline/ShoppingBagIcon'
+import HeartIcon from '@heroicons/react/outline/HeartIcon'
+import SearchIcon from '@heroicons/react/outline/SearchIcon'
 import CarouselAd from 'src/components/molecules/CarouselAd'
 import PopoverParent, {
   PopoverButton,
@@ -60,16 +63,19 @@ const Navbar = () => {
         <div className='absolute right-0 py-2'>
           <div className='container flex items-center justify-between mx-auto'>
             <div className='flex items-center space-x-2 '>
-              <input
-                placeholder='Search'
-                className='py-1 pl-4 pr-2 bg-gray-100 rounded-full'
-                type='text'
-              />
+              <div className='flex items-center'>
+                <SearchIcon className='z-10 w-6 h-6 -mr-8' />
+                <input
+                  placeholder='Search'
+                  className='py-2 pl-10 pr-2 bg-gray-100 rounded-full'
+                  type='text'
+                />
+              </div>
               <Link href='/'>
-                <RiDatabaseFill className='w-5 h-5' />
+                <HeartIcon className='w-6 h-6' />
               </Link>
               <Link href='/'>
-                <RiDatabaseFill className='w-5 h-5' />
+                <ShoppingBagIcon className='w-6 h-6' />
               </Link>
               <button
                 type='button'

@@ -9,14 +9,14 @@ export interface IBannerItemsProps {
 
 const BannerText = ({
   variant = 'description',
-  color = 'white',
+  color = 'inherit',
   className,
   children,
 }: {
   variant?: 'description' | 'title' | 'displayText'
-  color?: 'white' | 'black'
+  color?: 'white' | 'black' | 'inherit'
   className?: string
-  children: ReactElement | string
+  children: (ReactElement | string)[] | ReactElement | string
 }) => {
   const textSize = {
     description: 'text-base',
@@ -25,11 +25,12 @@ const BannerText = ({
   }
 
   const textColor = {
+    inherit: 'text-inherit',
     white: 'text-white',
     black: 'text-black',
   }
   return (
-    <div className={`${textColor[color]} ${textSize[variant]} ${className}`}>
+    <div className={`${textColor[color]}  ${textSize[variant]} ${className}`}>
       {children}
     </div>
   )

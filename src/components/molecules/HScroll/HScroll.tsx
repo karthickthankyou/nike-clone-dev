@@ -1,6 +1,5 @@
 import { createContext, ReactElement, useContext, useMemo } from 'react'
 
-// import { HiOutlineChevronLeft } from '@react-icons/all-files/hi/HiOutlineChevronLeft'
 // import { HiOutlineChevronRight } from '@react-icons/all-files/hi/HiOutlineChevronRight'
 import { useScroll } from 'src/hooks'
 
@@ -11,14 +10,26 @@ export interface IHScrollProps {
 
 const ScrollContext = createContext([] as any)
 
+export const useScrollContext = () => {
+  const context = useContext(ScrollContext)
+  if (!context) {
+    throw new Error(
+      `A composite Scroll component cannot be rendered outside of the parent HScroll component.`
+    )
+  }
+  return context
+}
+
 const RightArrow = ({
   children,
   className,
+  distance = -120,
 }: {
   children: ReactElement
+  distance?: number
   className?: string
 }) => {
-  const [scrollPos, scroll] = useContext(ScrollContext)
+  const { scrollPos, scroll } = useScrollContext()
   const show = scrollPos[0] > 0
   return (
     <div>
@@ -27,7 +38,7 @@ const RightArrow = ({
         className={`${className} ${
           show ? 'opacity-100' : 'opacity-10 cursor-auto'
         }`}
-        onClick={() => scroll(-60)}
+        onClick={() => scroll(distance)}
       >
         {children}
       </button>
@@ -38,11 +49,13 @@ const RightArrow = ({
 const LeftArrow = ({
   children,
   className,
+  distance = 120,
 }: {
   children: ReactElement
   className?: string
+  distance?: number
 }) => {
-  const [scrollPos, scroll] = useContext(ScrollContext)
+  const { scrollPos, scroll } = useScrollContext()
   const show = scrollPos[1] > 0
   return (
     <div>
@@ -51,7 +64,7 @@ const LeftArrow = ({
         className={`${className} ${
           show ? 'opacity-100' : 'opacity-10 cursor-auto'
         }`}
-        onClick={() => scroll(60)}
+        onClick={() => scroll(distance)}
       >
         {children}
       </button>
@@ -65,15 +78,16 @@ const HScrollBody = ({
   children: ReactElement[]
   className?: string
 }) => {
-  const [scrollEl, scrollListesener] = useContext(ScrollContext)
+  const { scrollEl, scrollListener } = useScrollContext()
+
   return (
     <div
       ref={scrollEl}
-      onScroll={scrollListesener}
+      onScroll={scrollListener}
       className={`flex py-3 space-x-2 overflow-x-scroll snap-x snap-mandatory scrollbar-hide ${className}`}
     >
       {children.map((child) => (
-        <div key={child.key} className='flex-shrink-0 snap-start'>
+        <div key={child.props.key} className='flex-shrink-0 snap-start'>
           {child}
         </div>
       ))}
@@ -82,16 +96,21 @@ const HScrollBody = ({
 }
 
 const HScroll = ({ children, className }: IHScrollProps) => {
-  const [scrollPos, scrollEl, scrollListesener, scroll] = useScroll()
+  const [scrollPos, scrollEl, scrollListener, scroll] = useScroll()
 
   const value = useMemo(
-    () => [scrollPos, scrollEl, scrollListesener, scroll],
-    [scroll, scrollEl, scrollListesener, scrollPos]
+    () => ({
+      scrollPos,
+      scrollEl,
+      scrollListener,
+      scroll,
+    }),
+    [scroll, scrollEl, scrollListener, scrollPos]
   )
   return (
-    <ScrollContext.Provider value={value}>
-      <div className={`relative ${className}`}>{children}</div>
-    </ScrollContext.Provider>
+    <div className={`relative ${className}`}>
+      <ScrollContext.Provider value={value}>{children}</ScrollContext.Provider>
+    </div>
   )
 }
 

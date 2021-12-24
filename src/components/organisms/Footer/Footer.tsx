@@ -20,9 +20,9 @@ const FooterLink = ({ text }: { text: string }) => (
   </Link>
 )
 
-const Footer = () => (
-  <footer className='text-gray-100 bg-gray-900'>
-    <div className='container p-6 mx-auto'>
+const Footer = ({ className }: { className?: string }) => (
+  <footer className={`text-gray-100 bg-gray-900 ${className}`}>
+    <div className='container py-6 mx-auto'>
       <div className='grid-cols-2 gap-2 md:grid '>
         <div className='grid gap-2 space-y-4 text-xs text-gray-500 md:grid-cols-3 md:space-y-0'>
           <ul className='space-y-2 text-white uppercase'>

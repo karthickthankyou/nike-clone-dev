@@ -59,7 +59,7 @@ const options = [
   },
 ]
 
-const HoverExpand = () => {
+const HoverExpand = ({ className }: { className?: string }) => {
   const [hover, sethover] = useState(false)
 
   const optionsShort = options.map((option) => ({
@@ -68,7 +68,7 @@ const HoverExpand = () => {
   }))
 
   return (
-    <div>
+    <div className={`${className}`}>
       <ul className='visible space-y-2 md:hidden'>
         {options.map((option) => (
           <li key={option.title}>

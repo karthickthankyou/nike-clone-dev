@@ -50,7 +50,7 @@ const PopoverPanel = ({
     leave='transition-all duration-200 ease-out'
     leaveFrom='transform opacity-100'
     leaveTo='transform opacity-0 top-0 top-full'
-    className='absolute left-0 right-0 z-10 gap-6 pt-2 pb-6 bg-white bg-opacity-70 top-12 backdrop-filter backdrop-blur-sm '
+    className='absolute left-0 right-0 z-10 gap-6 pt-2 pb-6 bg-white bg-opacity-90 top-12 backdrop-filter backdrop-blur-sm '
   >
     <Popover.Panel className='flex justify-center gap-6'>
       {children}

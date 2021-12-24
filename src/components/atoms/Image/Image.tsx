@@ -5,7 +5,7 @@ import fallbackImg from 'src/assets/fallback.jpg'
 
 export type IImageProps = React.ComponentProps<typeof NextImage> & {
   fallbackSrc?: string
-  className?: HTMLAttributes<typeof NextImage>['className']
+  className?: string
 }
 
 const Image = (props: IImageProps) => {
@@ -13,16 +13,18 @@ const Image = (props: IImageProps) => {
   const [imgSrc, setImgSrc] = useState(src)
 
   return (
-    <NextImage
-      {...rest}
-      alt={alt}
-      src={imgSrc}
-      className={`object-cover ${className}`}
-      layout='fill'
-      onError={() => {
-        setImgSrc(fallbackSrc)
-      }}
-    />
+    <div className={`relative w-full h-full ${className} overflow-hidden`}>
+      <NextImage
+        {...rest}
+        alt={alt}
+        src={imgSrc}
+        className={`object-cover `}
+        layout='fill'
+        onError={() => {
+          setImgSrc(fallbackSrc)
+        }}
+      />
+    </div>
   )
 }
 

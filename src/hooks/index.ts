@@ -14,6 +14,8 @@ export const useScroll = (): [
   const scrollEl = useRef<HTMLDivElement>(null)
 
   const scroll = (distance: number) => {
+    console.log('scroll', distance)
+
     if (scrollEl.current) {
       const leftPos = scrollEl.current.scrollLeft + distance
       scrollEl.current?.scrollTo({ left: leftPos, behavior: 'smooth' })

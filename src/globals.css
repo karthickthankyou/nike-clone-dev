@@ -15,6 +15,10 @@ a {
   box-sizing: border-box;
 }
 
+svg path {
+  stroke-width: 1.5;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

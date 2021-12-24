@@ -40,7 +40,7 @@ const CarouselAd = () => {
   }, [])
 
   return (
-    <div className='relative h-16 bg-gray-100 '>
+    <div className='relative h-16 overflow-hidden bg-gray-100'>
       {scrollData.map((item) => (
         <Transition
           show={item.id === index}
