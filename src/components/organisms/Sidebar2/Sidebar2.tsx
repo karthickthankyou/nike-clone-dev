@@ -1,11 +1,5 @@
 /* This example requires Tailwind CSS v2.0+ */
-import {
-  Dispatch,
-  Fragment,
-  ReactElement,
-  SetStateAction,
-  useState,
-} from 'react'
+import { Dispatch, Fragment, ReactElement, SetStateAction } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { XIcon } from '@heroicons/react/outline'
 

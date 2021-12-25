@@ -5,6 +5,7 @@ import Link from 'src/components/atoms/Link'
 export interface IBannerCardProps {
   imgSrc: string
   children?: ReactElement | ReactElement[]
+  className?: string
 }
 
 const BannerText = ({
@@ -42,8 +43,8 @@ const BannerButton = ({
   </Link>
 )
 
-const BannerCard = ({ imgSrc, children }: IBannerCardProps) => (
-  <div className='relative w-full h-112 sm:h-128 lg:h-176'>
+const BannerCard = ({ imgSrc, children, className }: IBannerCardProps) => (
+  <div className={`relative w-full h-112 sm:h-128 lg:h-176 ${className}`}>
     <Image
       src={imgSrc}
       alt='banner image'

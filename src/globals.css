@@ -53,3 +53,11 @@ svg path {
     @apply text-black focus:border-black focus:ring-black focus:outline-black rounded-sm;
   }
 }
+
+label {
+  @apply flex items-center;
+}
+
+input[type='checkbox'] {
+  @apply w-5 h-5 accent-black;
+}

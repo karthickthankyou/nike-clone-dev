@@ -7,7 +7,7 @@ export default {
   component: Sidebar2,
 } as ComponentMeta<typeof Sidebar2>
 
-const Template: ComponentStory<typeof Sidebar2> = (args) => {
+const Template: ComponentStory<typeof Sidebar2> = () => {
   const [open, setOpen] = useState(true)
   return (
     <div>

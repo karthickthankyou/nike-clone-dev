@@ -16,5 +16,6 @@ Primary.args = {
   displayName: 'Air Jordan 1 Mid',
   price: 9995,
   category: 'Shoes',
+  imgUrl: 'https://tailwindui.com/img/flags/flag-canada.svg',
 }
 Primary.parameters = {}

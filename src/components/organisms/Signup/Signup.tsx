@@ -1,5 +1,5 @@
 /* This example requires Tailwind CSS v2.0+ */
-import { Fragment, useState } from 'react'
+import { useState } from 'react'
 
 import { HiCheck } from '@react-icons/all-files/hi/HiCheck'
 import Link from 'src/components/atoms/Link'

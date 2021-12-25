@@ -7,7 +7,7 @@ export default {
   component: VideoPlayer,
 } as ComponentMeta<typeof VideoPlayer>
 
-const Template: ComponentStory<typeof VideoPlayer> = (args) => <VideoPlayer />
+const Template: ComponentStory<typeof VideoPlayer> = () => <VideoPlayer />
 
 export const Primary = Template.bind({})
 Primary.args = {}

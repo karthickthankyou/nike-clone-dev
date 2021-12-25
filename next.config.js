@@ -22,7 +22,7 @@ const moduleExports = withPWA({
     maximumFileSizeToCacheInBytes: 3000000,
   },
   images: {
-    domains: ['res.cloudinary.com'],
+    domains: ['res.cloudinary.com', 'static.nike.com'],
   },
 })
 
