@@ -6,14 +6,7 @@ export type submenuType = { title: string; subTitles: string[] }
 //       length: N
 //     } & ReadonlyArray<T>
 
-export const menMenu: [
-  submenuType,
-  submenuType,
-  submenuType,
-  submenuType,
-  submenuType,
-  submenuType
-] = [
+export const menMenu: submenuType[] = [
   {
     title: 'Featured',
     subTitles: [
@@ -97,14 +90,7 @@ export const menMenu: [
   },
 ]
 
-export const womenMenu: [
-  submenuType,
-  submenuType,
-  submenuType,
-  submenuType,
-  submenuType,
-  submenuType
-] = [
+export const womenMenu: submenuType[] = [
   {
     title: 'Featured',
     subTitles: [
@@ -189,15 +175,7 @@ export const womenMenu: [
   },
 ]
 
-export const kidsMenu: [
-  submenuType,
-  submenuType,
-  submenuType,
-  submenuType,
-  submenuType,
-  submenuType,
-  submenuType
-] = [
+export const kidsMenu: submenuType[] = [
   {
     title: 'Featured',
     subTitles: [
@@ -277,12 +255,7 @@ export const kidsMenu: [
   },
 ]
 
-export const customiseMenu: [
-  submenuType,
-  submenuType,
-  submenuType,
-  submenuType
-] = [
+export const customiseMenu: submenuType[] = [
   { title: 'Featured', subTitles: ['Nike By You New Releases'] },
   { title: 'Nike By You', subTitles: ['Men', 'Women'] },
   {
@@ -292,7 +265,7 @@ export const customiseMenu: [
   { title: 'Icons', subTitles: ['Air Max', 'Air Force 1', 'Free', 'Flyknit'] },
 ]
 
-export const salemenu: [submenuType, submenuType, submenuType, submenuType] = [
+export const salemenu: submenuType[] = [
   { title: 'Featured', subTitles: ['Shop All Sale'] },
 
   {

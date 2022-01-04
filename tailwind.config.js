@@ -4,7 +4,7 @@ module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx}', './pages/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
-      colors: { primary: colors.indigo },
+      colors: { primary: colors.indigo, accent: colors.black },
       spacing: {
         112: '28rem',
         128: '32rem',

@@ -7,7 +7,7 @@ export interface IMenuItemPartitionProps {
 }
 
 const MenuItemPartition = ({ text, className }: IMenuItemPartitionProps) => {
-  const input: submenuType[] = text instanceof Array ? text : [text]
+  const input = text instanceof Array ? text : [text]
   return (
     <div className='w-32 space-y-4 '>
       {input.map((ins) => (

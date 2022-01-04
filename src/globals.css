@@ -52,6 +52,10 @@ svg path {
   button {
     @apply text-black focus:border-black focus:ring-black focus:outline-black rounded-sm;
   }
+
+  ::selection {
+    @apply bg-accent text-white;
+  }
 }
 
 label {

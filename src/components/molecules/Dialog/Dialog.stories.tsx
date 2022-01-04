@@ -10,9 +10,14 @@ export default {
 const Template: ComponentStory<typeof Dialog> = ({ children }) => {
   const [open, setOpen] = useState(false)
   return (
-    <Dialog open={open} setOpen={setOpen}>
-      {children}
-    </Dialog>
+    <div>
+      <button type='button' onClick={() => setOpen((state) => !state)}>
+        toggle
+      </button>
+      <Dialog open={open} setOpen={setOpen}>
+        {children}
+      </Dialog>
+    </div>
   )
 }
 
