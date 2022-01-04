@@ -8,7 +8,7 @@ export default {
 } as ComponentMeta<typeof Signin>
 
 const Template: ComponentStory<typeof Signin> = () => {
-  const [state, setstate] = useState(false)
+  const [state, setstate] = useState(true)
   return <Signin open={state} setOpen={setstate} />
 }
 

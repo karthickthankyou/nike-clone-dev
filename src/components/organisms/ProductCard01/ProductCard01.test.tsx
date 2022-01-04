@@ -10,7 +10,7 @@ describe('ProductCard01 Component', () => {
         category=''
         imgUrl='https://tailwindui.com/img/flags/flag-canada.svg'
         price={99}
-      />
+      />,
     )
   })
 })

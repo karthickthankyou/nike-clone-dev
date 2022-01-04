@@ -7,7 +7,7 @@ describe('PopoverMenuItem Component', () => {
     render(
       <PopoverMenuItem>
         <div>Hello</div>
-      </PopoverMenuItem>
+      </PopoverMenuItem>,
     )
   })
 })

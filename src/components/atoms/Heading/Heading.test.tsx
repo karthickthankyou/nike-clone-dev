@@ -12,7 +12,7 @@ describe('header component', () => {
     render(
       <Heading variant='heading-1' headerType='h4'>
         {headingContent}
-      </Heading>
+      </Heading>,
     )
     expect(screen.getByText(headingContent)).toHaveTextContent(headingContent)
   })

@@ -7,7 +7,7 @@ describe('HeaderTemplate Component', () => {
     render(
       <HeaderTemplate heading='Featured'>
         <div>Hello World</div>
-      </HeaderTemplate>
+      </HeaderTemplate>,
     )
   })
 })

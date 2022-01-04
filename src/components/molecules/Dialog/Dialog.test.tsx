@@ -7,7 +7,7 @@ describe('Dialog Component', () => {
     render(
       <Dialog open setOpen={() => {}}>
         <div>Hello</div>
-      </Dialog>
+      </Dialog>,
     )
   })
 })

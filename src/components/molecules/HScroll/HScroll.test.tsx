@@ -8,7 +8,7 @@ describe('HScroll Component', () => {
       <HScroll>
         <div>Hello</div>
         <div>Hello</div>
-      </HScroll>
+      </HScroll>,
     )
   })
 })

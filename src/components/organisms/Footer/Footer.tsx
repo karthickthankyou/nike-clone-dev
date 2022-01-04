@@ -64,7 +64,7 @@ const Footer = ({ className }: { className?: string }) => (
           {[FaYoutube, FaFacebook, FaTwitter, FaInstagramSquare].map(
             (SocialIcon) => (
               <Icon key={SocialIcon.toString()} IconInput={SocialIcon} />
-            )
+            ),
           )}
         </div>
       </div>

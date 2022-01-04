@@ -10,7 +10,7 @@ describe('Image Component', () => {
         blurDataURL='ttps://via.placeholder.com/10'
         layout='fill'
         alt=''
-      />
+      />,
     )
   })
 })

@@ -8,7 +8,7 @@ describe('WithSidebar Component', () => {
     render(
       <WithSidebar SidebarComponent={<Accordion />} heading='Featured'>
         <div>Hello</div>
-      </WithSidebar>
+      </WithSidebar>,
     )
   })
 })

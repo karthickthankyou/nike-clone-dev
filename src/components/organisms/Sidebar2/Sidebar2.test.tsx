@@ -7,7 +7,7 @@ describe('Sidebar2 Component', () => {
     render(
       <Sidebar2 open={false} setOpen={() => {}}>
         <div>Hello</div>
-      </Sidebar2>
+      </Sidebar2>,
     )
   })
 })

@@ -18,12 +18,12 @@ describe('button component clicks', () => {
     render(
       <Button fullWidth onClickAction={() => {}}>
         {buttonContent}
-      </Button>
+      </Button>,
     )
     userEvent.click(
       screen.getByRole('button', {
         name: buttonContent,
-      })
+      }),
     )
   })
   test('should run default click action', async () => {
@@ -33,7 +33,7 @@ describe('button component clicks', () => {
     userEvent.click(
       screen.getByRole('button', {
         name: buttonContent,
-      })
+      }),
     )
     expect(consoleWarnMock).toBeCalledTimes(1)
     consoleWarnMock.mockRestore()

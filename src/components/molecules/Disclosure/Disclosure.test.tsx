@@ -7,7 +7,7 @@ describe('Disclosure Component', () => {
     render(
       <Disclosure title=' string'>
         <div>Hello World</div>
-      </Disclosure>
+      </Disclosure>,
     )
   })
 })

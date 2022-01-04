@@ -14,7 +14,7 @@ export const useScrollContext = () => {
   const context = useContext(ScrollContext)
   if (!context) {
     throw new Error(
-      `A composite Scroll component cannot be rendered outside of the parent HScroll component.`
+      `A composite Scroll component cannot be rendered outside of the parent HScroll component.`,
     )
   }
   return context
@@ -105,7 +105,7 @@ const HScroll = ({ children, className }: IHScrollProps) => {
       scrollListener,
       scroll,
     }),
-    [scroll, scrollEl, scrollListener, scrollPos]
+    [scroll, scrollEl, scrollListener, scrollPos],
   )
   return (
     <div className={`relative ${className}`}>
